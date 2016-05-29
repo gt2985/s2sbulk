@@ -1,0 +1,13 @@
+# Credentials for source organization
+source_url=https://login.salesforce.com
+source_username=salesforce_username
+source_password=salesforce_pw
+source_token=salesforce_token
+
+# Credentials for destination organization	
+destination_url=https://login.salesforce.com
+destination_username=salesforce_username
+destination_password=salesforce_pw
+destination_token=salesforce_token
+
+user_boof_suffix=For use in User field maps. Example value = ".newOrg" will import usernames in the format name@domain.com.newOrg

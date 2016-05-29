@@ -1,0 +1,9 @@
+config.properties
+test.properties
+/target
+/bin
+/jobs
+/logs
+.classpath
+.settings
+.project
