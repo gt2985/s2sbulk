@@ -10,6 +10,7 @@ Configure Salesforce API user credentials for both source and destination orgs i
 ## Generate Field Map 
 
 To print a suggested field map to console:
+
 `java -cp s2sb.jar api.salesforce.Runner FieldMapName.properties generate`
 
 Copy/paste field map out to actual field map file.
