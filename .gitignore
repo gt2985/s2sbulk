@@ -1,5 +1,6 @@
 config.properties
 test.properties
+/deploy
 /target
 /bin
 /jobs
