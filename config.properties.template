@@ -10,4 +10,4 @@ destination_username=salesforce_username
 destination_password=salesforce_pw
 destination_token=salesforce_token
 
-user_boof_suffix=For use in User field maps. Example value = ".newOrg" will import usernames in the format name@domain.com.newOrg
+user_boof_suffix=For use in User field maps. Example: user_boof_suffix=.newOrg will import usernames and emails in the format name@domain.com.newOrg

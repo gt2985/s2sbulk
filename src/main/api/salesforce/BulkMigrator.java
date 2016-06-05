@@ -328,7 +328,8 @@ public class BulkMigrator {
 	private boolean fieldNeedsLookupIDResolved(final String key) {
 		final String destFieldName = getContext().getFieldMap()
 				.getProperty(key);
-		return (destFieldName.toLowerCase().startsWith("#resolve"));
+		return (destFieldName.toLowerCase().startsWith("#resolve") || destFieldName
+				.toLowerCase().startsWith("#lookup"));
 	}
 
 	private boolean fieldIsLiteralValue(final String key) {

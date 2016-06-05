@@ -45,8 +45,8 @@ public class Resolver {
 		final Field f = getFieldByName(schema.getFields(), fieldName);
 		if (f == null) {
 			System.out
-					.println("Resolver could not resolve lookup reference ID for field: "
-							+ fieldName);
+			.println("Resolver could not resolve lookup reference ID for field: "
+					+ fieldName);
 			System.exit(1);
 		}
 		String referenceToObject;
@@ -66,8 +66,8 @@ public class Resolver {
 				.get(referenceToObject);
 		if (refObject == null) {
 			System.out
-					.println("Resolver does not have an initialized ReferenceObject for field: "
-							+ fieldName);
+			.println("Resolver does not have an initialized ReferenceObject for field: "
+					+ fieldName);
 			System.exit(1);
 		}
 		final String newID = refObject.getIDMap().get(id);
@@ -95,20 +95,17 @@ public class Resolver {
 						key);
 				if (resolveField == null) {
 					System.out
-							.println("Could not initialize lookup reference Resolver for field: "
-									+ key);
+					.println("Could not initialize lookup reference Resolver for field: "
+							+ key);
 					System.exit(1);
 				}
 				if (resolveField.getType() != FieldType.reference) {
 					System.out
-							.println("Field marked for #resolve is not a lookup reference field type: "
-									+ key);
+					.println("Field marked for #resolve is not a lookup reference field type: "
+							+ key);
 					System.exit(1);
 				}
-				/*
-				 * What is getReferenceTo for WhatId or WhoId? Probably an array
-				 * of objects.
-				 */
+
 				if (key.equals("WhoId")) {
 					objectsToCache.add("Contact");
 					objectsToCache.add("User");
@@ -120,8 +117,8 @@ public class Resolver {
 							.getReferenceTo()[0];
 					if (referenceToObject == null || referenceToObject == "") {
 						System.out
-								.println("Resolver could not parse the referenceToObject for field: "
-										+ key);
+						.println("Resolver could not parse the referenceToObject for field: "
+								+ key);
 						System.exit(1);
 					}
 					objectsToCache.add(referenceToObject);
@@ -129,8 +126,8 @@ public class Resolver {
 			}
 		}
 		System.out
-				.println(objectsToCache.size()
-						+ " objects identified in field map as needing #resolve of ID lookup references.");
+		.println(objectsToCache.size()
+				+ " objects identified in field map as needing #resolve of ID lookup references.");
 		for (final String objectName : objectsToCache) {
 			final ReferenceObject obj = new ReferenceObject(getContext(),
 					objectName);
